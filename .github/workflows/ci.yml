@@ -32,6 +32,9 @@ jobs:
       - name: Run eslint
         run: yarn run lint
       - name: Run tests
-        run: yarn run test
+        env:
+          ENV: ${{ secrets.ENV }}
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
+        run: ENV=$ENV MONGODB_URL=$MONGODB_URL yarn run test
       - name: Build
         run: yarn run build
