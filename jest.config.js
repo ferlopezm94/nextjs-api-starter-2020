@@ -1,17 +1,10 @@
 module.exports = {
-  roots: ['<rootDir>/src'],
+  clearMocks: true,
   preset: 'ts-jest',
+  roots: ['<rootDir>/src'],
   testEnvironment: 'node',
+  testMatch: ['**/__tests__/**/*.(e2e|unit).test.ts?(x)'],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
-  },
-  testMatch: ['**/__tests__/**/*.(e2e|unit).test.ts?(x)'],
-  globals: {
-    // We must specify a custom tsconfig for tests because we need the typescript transform
-    // to transform jsx into js rather than leaving it jsx such as the next build requires. you
-    // can see this setting in tsconfig.jest.json -> "jsx": "react"
-    'ts-jest': {
-      tsConfig: '<rootDir>/tsconfig.jest.json',
-    },
   },
 };
