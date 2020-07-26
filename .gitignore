@@ -22,3 +22,4 @@ coverage/
 /out/
 .env.*
 !.env.sample
+.vercel
