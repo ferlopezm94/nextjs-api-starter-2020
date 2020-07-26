@@ -43,6 +43,7 @@ $ yarn install
 ├── .github                     <-- Github Actions definitions and templates for Issues and Pull Requests
 ├── .vscode                     <-- Workspace settings to automatically apply our linting rules on files save
 ├── src                         <-- Source code
+│   ├── fixtures                <-- Utils to setup the environment of our tests
 │   ├── middlewares             <-- Middlewares used by the handlers
 │   ├── pages
 │       └── v1                  <-- Handlers for version 1 of the REST API
@@ -136,7 +137,7 @@ Testing our code is a fundamental part to ensure we're shipping code that works.
 
 For that reason jest is an important part of our setup. It includes a wide variety of tools that allow us to create, run and structure tests.
 
-Add new tests inside `__tests__` folders and run them using `yarn test`. To get test coverage information run `yarn test:coverage`.
+Add new tests inside `__tests__` folders, add a `.env.test` file in the root of the project (check `.env.sample`) and run them using `yarn test`. To get test coverage information run `yarn test:coverage`.
 
 To enhance the developer experience when reviewing jest snapshots we recommend you to install the [snapshot-tools](https://marketplace.visualstudio.com/items?itemName=asvetliakov.snapshot-tools) VSCode extension.
 
