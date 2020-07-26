@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import pino from 'pino';
 
+import { Handler } from './types';
+
 declare module 'next' {
   interface NextApiRequest {
     logger: pino.Logger;
@@ -20,8 +22,6 @@ function getLogger() {
   // console.log('new logger created');
   return logger;
 }
-
-type Handler = (req: NextApiRequest, res: NextApiResponse) => void;
 
 export const withLogger = (handler: Handler) => (req: NextApiRequest, res: NextApiResponse) => {
   const logger = getLogger();
