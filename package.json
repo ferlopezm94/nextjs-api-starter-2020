@@ -8,6 +8,7 @@
     "build": "next build",
     "commit": "git-cz",
     "dev": "next",
+    "env:pull": "vercel env pull .env.local",
     "execute": "ts-node-dev --respawn --no-notify --transpileOnly --project ./tsconfig.node.json",
     "execute:inspect": "ts-node-dev --inspect-brk --respawn --no-notify --transpileOnly --project ./tsconfig.node.json",
     "lint": "eslint . --ext .js,.ts",
@@ -57,7 +58,8 @@
     "semantic-release": "17.0.8",
     "ts-jest": "26.0.0",
     "ts-node-dev": "1.0.0-pre.44",
-    "typescript": "3.9.3"
+    "typescript": "3.9.3",
+    "vercel": "19.2.0"
   },
   "config": {
     "commitizen": {
