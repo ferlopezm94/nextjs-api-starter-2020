@@ -1,10 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
+import { withLogger } from './../../../../middlewares';
 import { connectToDatabase } from './../../../../utils';
 import { create, getMany } from './../../../../v1/users/controller';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  console.info({ status: 'handler start' });
+  req.logger = req.logger.child({ version: '1', module: 'users' });
+  req.logger.info({ status: 'handler start' });
 
   await connectToDatabase();
 
@@ -14,9 +16,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     case 'GET':
       return getMany(req, res);
     default:
-      console.warn({ status: `Method ${req.method} Not Allowed` });
+      req.logger.warn({ status: `Method ${req.method} Not Allowed` });
       return res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
 
-export default handler;
+export default withLogger(handler);
