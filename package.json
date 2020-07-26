@@ -13,9 +13,10 @@
     "lint": "eslint . --ext .js,.ts",
     "semantic-release": "semantic-release",
     "start": "next start",
-    "test": "env-cmd -f ./.env.test jest --passWithNoTests --runInBand",
-    "test:watch": "yarn run test --watch",
-    "test:coverage": "yarn run test --coverage"
+    "test": "jest --passWithNoTests --runInBand",
+    "test:local": "env-cmd -f ./.env.test yarn run test",
+    "test:watch": "yarn run test:local --watch",
+    "test:coverage": "yarn run test:local --coverage"
   },
   "dependencies": {
     "cors": "2.8.5",
