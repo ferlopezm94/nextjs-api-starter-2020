@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-import { withLogger } from './../../../../middlewares';
+import { withCors, withLogger } from './../../../../middlewares';
 import { connectToDatabase } from './../../../../utils';
 import { create, getMany } from './../../../../v1/users/controller';
 
@@ -21,4 +21,4 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 };
 
-export default withLogger(handler);
+export default withCors(withLogger(handler));
