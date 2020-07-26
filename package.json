@@ -1,6 +1,6 @@
 {
   "name": "nextjs-api-starter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Build a NodeJS Backend and APIs with NextJS, typescript, mongoose, and jest support.",
   "author": "Fenando López Martínez",
   "license": "MIT",
