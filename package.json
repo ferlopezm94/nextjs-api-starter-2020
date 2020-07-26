@@ -21,6 +21,7 @@
     "mongodb": "3.5.9",
     "mongoose": "5.9.25",
     "next": "9.4.4",
+    "pino": "6.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "validator": "13.1.1"
@@ -34,6 +35,7 @@
     "@types/mongodb": "3.5.25",
     "@types/mongoose": "5.7.32",
     "@types/node": "14.0.5",
+    "@types/pino": "6.3.0",
     "@types/react": "16.9.35",
     "@types/validator": "13.1.0",
     "@typescript-eslint/eslint-plugin": "3.0.0",
