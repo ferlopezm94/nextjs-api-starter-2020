@@ -55,7 +55,7 @@
     "lint-staged": "10.2.6",
     "node-mocks-http": "1.8.1",
     "prettier": "2.0.5",
-    "semantic-release": "17.0.8",
+    "semantic-release": "17.2.3",
     "ts-jest": "26.0.0",
     "ts-node-dev": "1.0.0-pre.44",
     "typescript": "3.9.3",
